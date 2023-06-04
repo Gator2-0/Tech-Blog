@@ -1,11 +1,20 @@
-<div class="col-md-8 blog">
+<div class="col-md-8 blog" style='display: inline-block'>
     <h4>{{blog.title}}</h4>
-    <span>{{format_date blog.date_created}}</span>
+    <span>{{ format_date blog.date_created}}</span>
     <br>
     <br>
     <p>{{blog.content}}</p>
     <span>Created by {{blog.user.name}}</span>
 </div>   
+
+{{#each comments as |comment|}}
+<div class="col-sm-3 blog" style='display: inline-block; vertical-align: top'> 
+  <h4>{{comment.user.name}}</h4>
+  <span>{{comment.content}}</span>
+  <span>{{comment.created_at}}</span>
+  <span>{{ blog.date_created}}</span>
+  </div>  
+{{/each}}
 
 <form class="form col-md-8 comment-form">
   <div class="form-group">
