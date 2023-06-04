@@ -23,7 +23,7 @@ Blog.hasMany(Comments,{
 });
 
 Comments.belongsTo(Blog,{
-  foreignKey: "comments_id"
+  foreignKey: "blog_id"
 });
 
 Comments.belongsTo(User,{
