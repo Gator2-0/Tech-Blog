@@ -1,1 +1,6 @@
-Home
+{{#each blogs as |blog|}}   
+  <div class="col-md-8">
+    <h4>{{blog.title}}</h4>
+    <span>{{blog.content}}</span>
+  </div>   
+{{/each}}
