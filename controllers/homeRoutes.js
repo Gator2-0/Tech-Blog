@@ -2,11 +2,13 @@ const router = require('express').Router();
 const { Blog, User } = require('../models');
 
 router.get('/', async (req,res) =>{
-  res.render('homepage')
+  res.render('homepage',{
+    logged_in: req.session.logged_in
+  })
 });
 
 router.get('/dashboard', async (req,res) =>{
-  
+
   res.render('dashboard')
 });
 
@@ -18,7 +20,7 @@ router.get('/newBlog', async (req,res) =>{
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/profile');
+    res.redirect('/');
     return;
   }
 
