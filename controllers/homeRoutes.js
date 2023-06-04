@@ -9,6 +9,10 @@ router.get('/dashboard', async (req,res) =>{
   res.render('dashboard')
 });
 
+router.get('/newBlog', async (req,res) =>{
+  res.render('newBlog')
+});
+
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
