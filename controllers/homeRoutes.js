@@ -9,11 +9,17 @@ router.get('/', async (req,res) =>{
 
 router.get('/dashboard', async (req,res) =>{
 
-  res.render('dashboard')
+  res.render('dashboard',{
+    logged_in: req.session.logged_in
+  })
 });
 
 router.get('/newBlog', async (req,res) =>{
-  res.render('newBlog')
+  
+  res.render('newBlog',{
+    name: req.session.name,
+    logged_in: req.session.logged_in
+  })
 });
 
 
