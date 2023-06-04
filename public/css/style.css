@@ -26,5 +26,6 @@ header, .project:not(:last-child) {
   border-width: 2px;
   border-style: solid;
   border-radius: 5px;
-  border-color: #1b89bc;;
+  border-color: #1b89bc;
+  min-height: 100px;
 }
