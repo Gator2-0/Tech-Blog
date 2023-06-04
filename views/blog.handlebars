@@ -1,1 +1,9 @@
-{{blog.id}}
+<div class="col-md-8 blog">
+    <h4>{{blog.title}}</h4>
+    <span>{{format_date blog.date_created}}</span>
+    <br>
+    <br>
+    <p>{{blog.content}}</p>
+    <span>Created by {{blog.user.name}}</span>
+    
+</div>   
