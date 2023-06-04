@@ -1,6 +1,6 @@
 {{#each blogs as |blog|}}   
   <div class="col-md-8">
     <h4>{{blog.title}}</h4>
-    <span>{{blog.content}}</span>
+    <span>{{format_date blog.date_created}}</span>
   </div>   
 {{/each}}
