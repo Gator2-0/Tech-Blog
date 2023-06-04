@@ -6,6 +6,7 @@ router.get('/', async (req,res) =>{
 });
 
 router.get('/dashboard', async (req,res) =>{
+  
   res.render('dashboard')
 });
 
