@@ -1,1 +1,10 @@
+{{#each blogs as |blog|}}   
+  <div class="col-md-8 blog">
+    <a href="/blog/{{blog.id}}">
+      <h4>{{blog.title}}</h4>
+      <span>{{format_date blog.date_created}}</span>
+    </a>
+  </div>   
+{{/each}}
+
 <a href="/newBlog">+ New Blog</a>
