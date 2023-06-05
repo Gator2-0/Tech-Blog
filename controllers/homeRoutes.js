@@ -17,7 +17,7 @@ router.get('/dashboard', withAuth, async (req,res) =>{
   const blogData = await Blog.findAll(
     {where : {user_id : req.session.user_id}
   });
-  
+
   const blogs = blogData.map((blog) => blog.get({ plain: true }));
 
   res.render('dashboard',{
@@ -34,7 +34,7 @@ router.get('/newBlog', withAuth, async (req,res) =>{
   })
 });
 
-router.get('/blog/:id',  async (req,res) =>{
+router.get('/blog/:id', withAuth, async (req,res) =>{
   try {
     const blogData = await Blog.findByPk(req.params.id,{
       include: [
