@@ -21,7 +21,7 @@ router.get('/dashboard', withAuth, async (req,res) =>{
 });
 
 router.get('/newBlog', withAuth, async (req,res) =>{
-  
+  const blogData = await 
   res.render('newBlog',{
     name: req.session.name,
     logged_in: req.session.logged_in

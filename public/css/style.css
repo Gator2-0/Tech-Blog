@@ -1,7 +1,10 @@
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
-
+body{
+  background-color: #04415e;
+  color: aliceblue;
+}
 .no-button {
   background: none;
   border: none;
@@ -28,4 +31,6 @@ header, .project:not(:last-child) {
   border-radius: 5px;
   border-color: #1b89bc;
   min-height: 100px;
+  margin-bottom: 25px;
+  padding: 10px
 }
