@@ -13,9 +13,10 @@ const commentFormHandler =async (event) => {
       headers: { 'Content-Type': 'application/json' },
     });
 
+    
     if (response.ok) {
-      // If successful, redirect the browser to the profile page
-      document.location.replace('/');
+      // If successful, refresh page.
+      window.location.reload();
     } else {
       alert(response.statusText);
     }

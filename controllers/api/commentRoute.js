@@ -12,7 +12,7 @@ router.post('/', (req,res) => {
     }
     const commentData = Comments.create(request);
 
-    res.status(200),json(commentData);
+    res.status(200).json(commentData);
 
   } catch (err) {
     res.status(400).json(err);
