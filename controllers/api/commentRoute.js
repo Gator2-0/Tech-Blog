@@ -11,9 +11,7 @@ router.post('/', (req,res) => {
       "blog_id" : req.body.blog_id
     }
     const commentData = Comments.create(request);
-
     res.status(200).json(commentData);
-
   } catch (err) {
     res.status(400).json(err);
   }

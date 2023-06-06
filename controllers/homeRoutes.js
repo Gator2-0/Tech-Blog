@@ -27,7 +27,7 @@ router.get('/dashboard', withAuth, async (req,res) =>{
 });
 
 router.get('/newBlog', withAuth, async (req,res) =>{
-  const blogData = await 
+  
   res.render('newBlog',{
     name: req.session.name,
     logged_in: req.session.logged_in
@@ -62,12 +62,15 @@ router.get('/blog/:id', withAuth, async (req,res) =>{
     const comments = commentData.map((comment) => comment.get({ plain: true }));
     console.log('comments');
     console.log(comments);
-
+    console.log("req.session.user_id");
+    console.log(req.session.user_id);
+    
     res.render('blog',{
       blog,
-      logged_in: req.session.logged_in,
-      comments
+      comments,
+      logged_in: req.session.logged_in
     })
+
   } catch (err) {
     res.status(500).json(err);
   }

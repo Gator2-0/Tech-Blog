@@ -21,8 +21,9 @@
   </div>   
 
   <div class="col-md-4 ">
+    
   {{#each comments as |comment|}}
-  <div class="blog" > 
+  <div class="blog" >
     <h4>{{comment.user.name}}</h4>
     <p>{{comment.content}}</p>
     <span>{{format_date comment.date_created}}</span>
